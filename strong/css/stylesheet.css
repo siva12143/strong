@@ -1,0 +1,568 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+ul li {
+	list-style-type: none;
+}
+body {
+	font-family: 'Roboto', sans-serif !important;
+}
+.whatsapp {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	z-index: 50;
+	animation: whatsapp 2s infinite ease-in-out alternate;
+}
+@keyframes whatsapp {
+	from { width: 60px; height: 60px; }
+	to { width: 40px; height: 40px; }
+}
+/*---------------------header-------------------*/
+
+header{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+.menubar {
+	text-align: right;
+	font-size: 26px;
+	display: none;
+}
+.menu ul li{
+	display: inline-block;
+}
+.menu ul li a {
+	font-size: 16px;
+	text-transform: capitalize;
+	line-height: 35px;
+	color: #fff;
+	font-weight: 400;
+	padding: 0 25px;
+	display: inline-block;
+}
+.menu a::after {
+	content: '';
+	width: 0%;
+	height: 3px;
+	background-color: #7fcf7b;
+	margin: 5px auto 0;
+	opacity: 0;
+	display: block;
+	border-radius: 5px;	
+}
+.menu a:hover::after {
+	opacity: 1;
+	width: 60%;
+	transition: 0.5s;
+}
+.menu-search {
+	padding-left: 78px;
+}
+.menu-search:hover {
+	background-color: #563a34;
+}
+.menu ul li a:hover {
+	color: #7fcf7b;
+	text-decoration: none;
+}
+.menu-search:hover .menu-search img{
+	visibility: hidden;
+}
+/*---------------------header-------------------*/
+/*---------------------banner-------------------*/
+.banner {
+	background: url("../images/bg-banner.png") no-repeat;
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+	position: relative;
+	top: -16px;
+	left: 0;
+	}
+.banner-box {
+	width: 30%;
+	position: absolute;
+	top: 30%;
+
+}
+.banner-box h1 {
+	font-size: 50px;
+	line-height: 60px;
+	color: #f3f3f3;
+	font-weight: 700;
+	font-family: "Playfair Display";
+}
+.p {
+	font-size: 16px;
+	line-height: 25px;
+	color:  #a8c3bf;
+	font-weight: 300;
+}
+.banner button {
+	padding: 18px 45px;
+}
+.banner figure {
+	position: absolute;
+	top: 50%;
+	left: 41%;	
+}
+.banner figure img {
+	position: relative;
+	animation-name: hex-gym;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes hex-gym {
+	from {left: 130px; bottom: 250px;}
+	to { left:0px; bottom:0;}
+}
+
+.pages {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+.pages span {
+	border: 3px solid #563a34;
+	width: 30px;
+	margin: 0 3px;
+	border-radius: 2px;
+	display: inline-block;
+}
+.page-active {
+	border-color: #b61a16 !important;
+}
+
+.scroll {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: rotate(180deg);
+	padding: 10px 10px;
+}
+.scroll span {
+	writing-mode: vertical-lr;
+	font-size: 16px;
+	line-height: 25px;
+	color: #3c1311;
+	font-weight: 400;
+	display: inline-block;
+}
+.scroll-cnt {
+	position: relative;
+	top: 25px;
+	left: -3px;
+}
+.scroll-down {
+	transform: rotate(-90deg);
+	display: inline-block;
+	vertical-align: bottom;
+	position: relative;
+	animation-name: scroll-down;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+}
+@keyframes scroll-down{
+	from   { left:0px;top:0px;}
+  to {left:0px;top:25px;}
+}
+/*---------------------banner-------------------*/
+.background {
+	background:url("../images/bg2.png") no-repeat center;
+	background-size: cover;
+	position: relative;
+	top: -16px;
+}
+/*---------------------about-------------------*/
+
+.my-h2 {
+	font-size: 44px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 70px;
+	color: #f3f3f3;
+	font-weight: 700;
+	font-family: "Playfair Display";
+	position: relative;
+	z-index: 1;
+}
+.my-h2::before {
+	content: '';
+	width:0;
+	height: 5px;
+	background-color: #b61a16;
+	opacity: 0;
+	display: block;
+	margin: 0 auto 0;
+	position: absolute;
+	top: 30px;
+	left: -40px;
+	transform: rotate(-45deg);
+	z-index: 0
+}
+.my-h2::after {
+	content: '';
+	width:0;
+	height: 3px;
+	background-color: #b61a16;
+	opacity: 0;
+	display: block;
+	margin: 0 auto 0;
+	position: absolute;
+	top: 16px;
+	left: -28px;
+	transform: rotate(-45deg);
+	z-index: 0
+}
+.my-h2:hover.my-h2::before{
+	opacity: 1;
+	width: 20%;
+	transition-duration: 1s;
+}
+.my-h2:hover.my-h2::after{
+	opacity: 1;
+	width: 10%;
+	transition-duration: 1s;
+}
+.my-h5 {
+	font-size: 20px;
+	line-height: 22px;
+	color: #f3f3f3;
+	font-weight: 400;
+}
+.read-more button{
+	font-size: 16px;
+	text-transform: capitalize;
+}
+.read-more img {
+	position: relative;
+	animation: read-more 0.5s infinite ease-in-out alternate;
+}
+@keyframes read-more {
+	from   { left:0px; top:0px;}
+  to { left:10px; top:0px;}
+}
+
+.img-1 {
+	position: relative;
+	animation: img-1 2s infinite ease-in-out alternate;
+	cursor: pointer;
+}
+@keyframes img-1 {
+	from { left: 0; bottom:-30px; }
+	to { left: 0;bottom: 30px; }
+}
+.img-2 {
+	position: relative;
+	animation: img-1 2s infinite 2s ease-in-out alternate;
+	cursor: pointer;
+}
+@keyframes img-1 {
+	from { left: 0; bottom:30px; }
+	to { left: 0;bottom: -30px; }
+}
+/*---------------------about-------------------*/
+
+/*---------------------our courses-------------------*/
+.course {
+	position: relative;
+}
+.courses {
+	width: 30%;
+	margin: 0 auto 10px;
+}
+.courses::before {
+	top:40px !important;
+	left: -22px !important;
+}
+.courses::after {
+	top:30px !important;
+	left: -15px !important;
+}
+.course-inner figure {
+	position: relative;
+	height: 180px;
+}
+.course-inner figure img {
+	width: 100%;
+	height: 100%;
+	vertical-align: bottom;
+	size: cover;
+}
+.course-inner figure::after {
+	content: '';
+	width: 10px;
+	height: 180px;
+	background-color: #9d1613;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0; 
+}
+.course-hover {
+	background-color: #000;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.course-inner:hover .course-hover {
+	opacity: 0.5;
+	transition-duration: 1s;
+}
+
+.course-inner h3 {
+	font-size: 20px;
+	line-height: 25px;
+	color: #f3f3f3;
+	font-weight: 500;
+}
+.course-pay span{
+	font-size: 26px;
+	color: #f9d83d;
+}
+.course-pay small {
+	font-size: 14px; 
+	color: #a8c3bf;
+}
+.course-pre a{
+	background: url("../images/right-arrow.png") no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color:  #949191;
+	display: inline-block;
+}
+.course-next a{
+	background: url("../images/right-arrow (2).png") no-repeat;
+	background-position: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color:  #949191;
+	display: inline-block;
+}
+.next-pre {
+	position: absolute;
+	top: 38%;
+	width: 90%;
+	left: 7%;
+}
+.course-pre a:hover, .course-next a:hover {
+	background-color: #9d1613; 
+}
+/*---------------------our courses-------------------*/
+
+/*---------------------offer-------------------*/
+.offer {
+	background: url("../images/bg-3.png") no-repeat;
+	background-size: cover;
+	height: 500px;
+	position: relative;
+	top: -16px;
+}
+.offer-h2 {
+	width: 91%;
+	margin: 0 auto 10px; 
+}
+.offer-cnt {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/*---------------------offer-------------------*/
+
+/*---------------------programe-------------------*/
+.programe {
+	background: url("../images/bg-4.png") no-repeat;
+	background-size: cover;
+	position: relative;
+	top: -16px;
+	height: 900px;
+}
+.programe h2,.client h2 {
+	width: 47%;
+	margin: 0 auto 10px;
+}
+.programe h5 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.prg-cardio,.body-cardio {
+	background-color: #080808;
+	border-radius: 10px;
+	width: 50%;
+	display: inline-block;
+	border: 1px solid #18a7bb;
+	position: relative;
+	animation: cardio 2s infinite ease-in-out alternate;
+}
+.body-cardio {
+	animation-name: body !important;
+	animation-delay: 1s;
+}
+@keyframes body {
+	from { top: 0; right: -220px; }
+	to { top: 0; right: -160px; }
+}
+@keyframes cardio {
+	from { top: 0; right: 0; }
+	to { top: 0; right:-70px; }
+}
+.prg-cardio::before{
+	content: "";
+    position: absolute;
+    left:100%;
+    top: 35%;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-left: 60px solid  #18a7bb;
+    border-bottom: 25px solid transparent;
+}
+.body-cardio::before {
+	content: "";
+    position: absolute;
+    right:100%;
+    top: 35%;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 60px solid  #18a7bb;
+    border-bottom: 25px solid transparent;
+}
+
+.prg-img{
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+}
+.body-img {
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+}
+.body-img::before {
+	content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #346970;
+    display: block;
+    transform: rotate(63deg);
+    position: absolute;
+    top: -39px;
+    left: -55px;
+}
+.body-img::after {
+	content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #346970;
+    display: block;
+    transform: rotate(-63deg);
+    position: absolute;
+    bottom: -22px;
+    left: -54px;
+}
+.prg-cardio h4,.body-cardio h4 {
+	font-size: 18px;
+	line-height: 22px;
+	color: #18a7bb;
+	font-weight: 400;
+}
+.prg-cardio p,.body-cardio p {
+	font-size: 13px;
+	line-height: 19px;
+	color: #a4a6a6;
+	font-weight: 300;
+	margin: 0!important;
+}
+
+/*---------------------programe-------------------*/
+
+/*---------------------client-------------------*/
+.client {
+	background: url("../images/bg-5.png") no-repeat;
+	background-size: cover;
+	position: relative;
+	top: -16px;
+	height: 768px;
+}
+
+.client-card {
+	width: 55%;
+	height: 320px;
+	position: relative;
+	top: 100px;
+}
+.client-card p {
+	font-size: 20px;
+	line-height: 28px;
+	color: #f3f3f3;
+	font-weight: 400;
+	font-style: italic;
+	padding: 50px 50px 10px;
+}
+.client-card h3{
+	font-size: 20px;
+	line-height: 28px;
+	color: #7fcf7b;
+	font-weight: 700;
+	z-index: 10;
+}
+.goulan {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	z-index: 1;
+}
+.customer {
+	position: absolute;
+	bottom: -68px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.client-next {
+	position: absolute;
+	top: 50%;
+	width: 90%;
+	left: 7%;
+}
+/*---------------------client-------------------*/
+
+/*---------------------footer-------------------*/
+footer {
+	background-color: #090909;
+	position: relative;
+	top: -17px;
+}
+.foot-link:hover {
+	transform: translateY(-5px);
+	transition-duration: 1s;
+}
+.foot-link a:hover{
+	text-decoration: none !important;
+}
+/*---------------------footer-------------------*/
